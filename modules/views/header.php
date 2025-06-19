@@ -12,12 +12,13 @@
 	<?php header("Cache-Control: post-check=0, pre-check=0", false); ?>
 	<?php header("Pragma: no-cache"); ?>
 	<?php header("Content-Type: text/html; charset=UTF-8"); ?>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Photography and Video by Zarek Capturing Pure Emotion since 1988">
-	<meta name="keywords" content="zarek, photographybyzarek, picture, photo">
-	<meta name="robots" content="noodp,noydir">
-	<link href="<?php echo themes_url('images/favicon.ico'); ?>" rel="shortcut icon" type="image/x-icon" />
-	<link href="<?php echo themes_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Photography and Video by Zarek Capturing Pure Emotion since 1988">
+        <meta name="keywords" content="zarek, photographybyzarek, picture, photo">
+        <meta name="robots" content="noodp,noydir">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="<?php echo themes_url('images/favicon.ico'); ?>" rel="shortcut icon" type="image/x-icon" />
+        <link href="<?php echo themes_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
 	<style type="text/css">
 	<?php
 		echo $css_stylesheet;

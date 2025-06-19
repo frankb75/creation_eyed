@@ -3,7 +3,7 @@
 <div style="text-align:right">
 	<img src="<?php echo themes_url('images/icon_arrow.png'); ?>" style="float:right"/>
 </div>
-<div style="margin-left:auto; margin-right:auto; width:80%; padding-left:80px; overflow:hidden;">
+<div style="margin-left:auto; margin-right:auto; width:100%; padding:0 10px; overflow:hidden;">
 	<div style="font-family:Helvetica;color:#646464;font-size:24px;"><a href="<?php echo base_url(); ?>"><img src="<?php echo themes_url('images/home_icon.png'); ?>" /></a> Home</div>
 	<?php
 		$query =  $this->QModel->sf('home_photos');
@@ -132,7 +132,7 @@
 </div>
 <br />
 <br />
-<div style="margin-left:auto; margin-right:auto; width:60%; padding-left:80px; overflow:hidden;">
+<div style="margin-left:auto; margin-right:auto; width:100%; padding:0 10px; overflow:hidden;">
 	<div style="color:#646464;float:left;width:65%;padding:20px 10px 10px 10px;">
 		WeddingWire Couples' Choice Awards&reg; recipients represent the top five percent of wedding professionals within the WeddingWire Network who demonstrate excellence in quality, service, responsiveness and professionalism. 
 	</div>
