@@ -117,19 +117,22 @@ function getScrollTop()
 }
 
 window.onscroll = function(){
-	var box = document.getElementById('mini');
-	scroll = getScrollTop();
+        var box = document.getElementById('mini');
+        if(!box){
+                return;
+        }
+        var scroll = getScrollTop();
 
-	if(scroll <= 400){
-		box.style.marginTop = 95 - scroll + "px";
-		box.style.position = "fixed";
-		console.log('a'+scroll);
-	}else{
-		box.style.position = "fixed";
-		box.style.left = "82%";
-		box.style.marginTop = "-290px";
-		console.log('c');
-	}
+        if(scroll <= 400){
+                box.style.marginTop = 95 - scroll + "px";
+                box.style.position = "fixed";
+                console.log('a'+scroll);
+        }else{
+                box.style.position = "fixed";
+                box.style.left = "82%";
+                box.style.marginTop = "-290px";
+                console.log('c');
+        }
 };
 </script>
 </body>
