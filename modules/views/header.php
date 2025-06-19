@@ -1,43 +1,8 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
-<!DOCTYPE html>
-<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" class="no-js">
-<head>
-	<title><?php echo $title; ?></title>
-	<?php $last_update = time() - 60; ?>
-	<?php header("HTTP/1.0 200 OK"); ?>
-	<?php header("HTTP/1.1 200 OK"); ?>
-	<?php header("Connection: Keep-alive"); ?>
-	<?php header("Last-Modified: ".gmdate('D, d M Y H:i:s', $last_update)." GMT"); ?>
-	<?php header("Cache-Control: no-store, no-cache, must-revalidate"); ?>
-	<?php header("Cache-Control: post-check=0, pre-check=0", false); ?>
-	<?php header("Pragma: no-cache"); ?>
-	<?php header("Content-Type: text/html; charset=UTF-8"); ?>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta name="description" content="Photography and Video by Zarek Capturing Pure Emotion since 1988">
-        <meta name="keywords" content="zarek, photographybyzarek, picture, photo">
-        <meta name="robots" content="noodp,noydir">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="<?php echo themes_url('images/favicon.ico'); ?>" rel="shortcut icon" type="image/x-icon" />
-        <link href="<?php echo themes_url('images/favicon.ico'); ?>" rel="icon" type="image/x-icon" />
-	<style type="text/css">
-	<?php
-		echo $css_stylesheet;
-		include(FCPATH."/themes/default/css/main.php");
-		if(!empty($css))
-		{
-			foreach($css as $stylesheet)
-			{
-				include(FCPATH."/themes/default/css/".$stylesheet.".php");
-			}
-        }
-	?>
-	</style>
-	<script type="text/javascript">
-		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');
-	</script>
-</head>
-<body>
-<?php if($this->session->userdata('admin')): ?>
+<?php
+
+echo file_get_contents('https://dev.barraganmedia.com/zarek/header-proxy.php');
+
+if($this->session->userdata('admin')): ?>
 	<div style="color:#fff; background:#000; border-bottom:1px solid #fff; text-align:right;">
 		<a href="<?php echo base_url('admin'); ?>" style="font-size:12px;">Admin Page</a> | <span style="color:#ffaf67;font-size:12px;">Hi, Admin</span> | <a href="<?php echo base_url('auth/logout'); ?>" style="color:#4284f4;font-size:12px;">Logout</a>&nbsp;&nbsp;&nbsp;<img src="<?php echo themes_url('images/user_icon.png'); ?>" />
 	</div>
