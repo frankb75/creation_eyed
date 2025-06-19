@@ -51,3 +51,18 @@
 .blackandwhite { -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); filter: grayscale(100%); }
 
 .Color { -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%); filter: grayscale(0%); }
+
+/* Justified gallery layout */
+.gallery-wrap {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+}
+
+.gallery-item {
+        background:#ffffff;
+        height:290px;
+        width:32%;
+        margin-bottom:9px;
+        overflow:hidden;
+}

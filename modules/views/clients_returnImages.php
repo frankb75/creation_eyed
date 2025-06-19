@@ -1,14 +1,16 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <div style="margin-bottom:10px; text-align:right;"><input class="input_cart" type="submit" name="continue" value="Continue" style="color:#fff;"/></div>
 <?php
-	$query = $this->QModel->sfwa('clients_photos','clients_id',$clients_id,'CAST(photos AS DECIMAL(10,2)) ASC');
-	while($get = $this->QModel->g($query)):
+       $query = $this->QModel->sfwa('clients_photos','clients_id',$clients_id,'CAST(photos AS DECIMAL(10,2)) ASC');
+?>
+<div class="gallery-wrap">
+<?php while($get = $this->QModel->g($query)):
 	$clients_photos_id = $get['clients_photos_id'];
 	$photos = $get['semi_original_image'];
 	$original_image = $get['original_image'];
 	$clients_photos_created = $get['clients_photos_created'];
 ?>
-	<div style="overflow:hidden; background:#ffffff; height:290px; width:31.5%; float:left; overflow:hidden; margin-left:9px; margin-bottom:9px;">
+       <div class="gallery-item">
 		<div style="text-align:center; width:auto; height:224px; overflow:hidden; margin:10px 10px 5px 10px; background:#e2e2e2;">
 			<a href="<?php echo base_url('uploads/gallery/clients/'.$clients_id.'/original/'.$original_image); ?>" rel="lightbox[jnk]">
 				<table style="height:224px; margin:0 auto;">
@@ -40,7 +42,8 @@
 				<img id="star<?php echo $clients_photos_id; ?>" src="<?php echo themes_url('images/icon_disstar.png'); ?>" style="float:right; margin-right:5px; cursor:pointer;" onclick="markAsFavorite(<?php echo $clients_id; ?>,<?php echo $clients_photos_id; ?>,'clients');"/>
 			<?php endif; ?>
 		</div>
-	</div>
+       </div>
 <?php endwhile; ?>
+       </div>
 <div style="clear:both;">&nbsp;</div>
 <div style="margin-top:10px; text-align:right;"><input class="input_cart" type="submit" name="continue" value="Continue" style="color:#fff;"/></div>
