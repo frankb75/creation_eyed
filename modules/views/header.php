@@ -1,6 +1,6 @@
 <?php
 
-echo file_get_contents('https://dev.barraganmedia.com/zarek/header-proxy.php');
+echo file_get_contents('https://dev.barraganmedia.com/zarek/proxies/header-proxy.php');
 
 if($this->session->userdata('admin')): ?>
 	<div style="color:#fff; background:#000; border-bottom:1px solid #fff; text-align:right;">
