@@ -77,5 +77,7 @@ window.onscroll = function(){
         }
 };
 </script>
-</body>
-</html>
+<?php
+// ✅ Finally, pull the live WordPress footer using the proxy
+echo file_get_contents('https://dev.barraganmedia.com/zarek/proxies/footer-proxy.php');
+?>
