@@ -75,3 +75,9 @@ input[type=submit]{ padding:5px; }
 	padding:5px;
 }
 .input_cart { font-family:"Tahoma",Verdana,Times New Roman,sans-serif; background:#39393d; color:#8f8a8a; border:1px solid #575757; border-radius:5px; }
+
+@media screen and (max-width: 600px) {
+    .left-container { width:100%; position:relative; }
+    .wrap { width:100%; }
+    body { padding:0 10px; }
+}
