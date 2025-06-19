@@ -1,0 +1,115 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<?php get_header("header",array("client_css")); ?>
+<div style="margin-left:auto; margin-right:auto; width:85%; overflow:hidden;">
+	<div style="color:#646468;font-size:24px;">
+		Gallery Selections
+	</div>
+	<select class="input_text" onchange="open_div(this.value);">
+		<option>Select a Gallery...</option>
+		<?php
+			$query2 = $this->QModel->query("SELECT * FROM clients WHERE posted='Yes' AND expiration_date > CURDATE() ORDER BY clients_id ASC");
+		?>
+		<?php while($get2 = $this->QModel->g($query2)): ?>
+			<?php if($get2['password']): ?>
+				<option value="<?php echo $get2['clients_id']; ?>-<?php echo base_url('gallery/clients_gallery_view/'.$get2['clients_id']); ?>"><?php echo $get2['client_name']; ?></option>
+			<?php else: ?>
+				<option value="<?php echo $get2['clients_id']; ?>-<?php echo base_url('gallery/clients_gallery_view/'.$get2['clients_id']); ?>-FALSE"><?php echo $get2['client_name']; ?></option>
+			<?php endif; ?>
+		<?php endwhile; ?>
+	</select>
+	<br />
+	<br />
+	<hr color="#555556" />
+	<br />
+</div>
+<div style="margin-left:auto; font-family:Helvetica; margin-right:auto; width:85%; overflow:hidden;">
+	<?php 
+		$query = $this->QModel->query("SELECT * FROM clients WHERE posted='Yes' AND expiration_date > CURDATE() ORDER BY clients_id ASC");
+		$count = $this->QModel->c($query);
+	?>
+	<?php if($count == 0): ?>
+		<div style="width:100%; font-size:18px;">
+			No Records Found!
+		</div>
+	<?php else: ?>
+	<?php
+		while($get = $this->QModel->g($query)):
+		$clients_id = $get['clients_id'];
+		$client_name = $get['client_name'];
+		$date_client = $get['date_client'];
+		$expiration_date = $get['expiration_date'];
+		$password = $get['password'];
+		$posted = $get['posted'];
+		$client_created = $get['client_created'];
+	?>
+		<?php if($password): ?>
+			<a href="javascript:void(0)" onclick="open_div('<?php echo $clients_id; ?>-<?php echo base_url('gallery/clients_gallery_view/'.$get['clients_id']); ?>')" style="cursor:pointer;">
+				<div style="float:left; width:224px; padding-bottom:20px; overflow:hidden;">
+					<div style="width:224px; height:224px; text-align:center; /* background:#e2e2e2; */ text-align:center; overflow:hidden;">
+						<div style="height:224px; width:224px; display:table-cell; vertical-align:middle;">
+							<img src="<?php echo base_url("uploads/gallery/clients/".$clients_id."/semi-original/".$get['semi_original_image']); ?>" style="margin:0 auto;"/>
+						</div>
+					</div>
+				</div>
+			</a>
+			<div style="float:left;padding:5px;"></div>
+			<div id="viewEvent<?php echo $clients_id; ?>" class="bak_light">
+				<div class="pass_pop">
+					<div style="text-align:right;">
+						<img src="<?php echo themes_url('images/close_button_red.png'); ?>" onclick="close_div(<?php echo $clients_id; ?>)" style="cursor:pointer;"/>
+					</div>
+					<div style="font-size:20px;text-align:center;"><?php echo $client_name; ?></div>
+					<br />
+					<div id="errorMsg<?php echo $clients_id; ?>"></div>
+					<form id="form_light" action="<?php echo base_url('gallery/clients/'.$clients_id); ?>" method="POST">
+						<table>
+							<tr>
+								<td><input class="input_text" type="password" name="password" placeholder="Password" /></td>
+							</tr>
+							<tr>
+								<td><div class=""></div>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+									<input id="vEvent<?php echo $clients_id; ?>" type="submit" name="submit" value="View Event" onClick="vPassword<?php echo $clients_id; ?>()"/>
+									<div id="vLoading<?php echo $clients_id; ?>" style="display:none;"><img src="<?php echo themes_url('images/loading2.gif'); ?>" style="vertical-align:middle;"/> Opening. Please wait...</div>
+								</td>
+							</tr>
+						</table>
+						<script type="text/javascript">
+							function vPassword<?php echo $clients_id; ?>()
+							{
+								document.getElementById('vEvent<?php echo $clients_id; ?>').style.display = "none";
+								document.getElementById('vLoading<?php echo $clients_id; ?>').style.display = "block";
+							}
+						</script>
+					</form>
+				</div>
+			</div>
+		<?php else: ?>
+			<a href="<?php echo base_url('gallery/clients_gallery_view/'.$clients_id); ?>">
+				<div style="float:left; width:224px; padding-bottom:20px; overflow:hidden;">
+
+					<div style="width:224px; height:224px; text-align:center; /* background:#e2e2e2; */ text-align:center; overflow:hidden;">
+						<div style="height:224px; width:224px; display:table-cell; vertical-align:middle;">
+							<img src="<?php echo base_url("uploads/gallery/clients/".$clients_id."/semi-original/".$get['semi_original_image']); ?>" style="margin:0 auto;"/>
+						</div>
+					</div>
+				</div>	</a>
+			<div style="float:left;padding:5px;"></div>
+		<?php endif; ?>
+	<?php endwhile; ?>
+	<?php endif; ?>
+	<div id="mainLoading" class="bak_light">
+		<div class="pass_pop">
+			<img src="<?php echo themes_url('images/loading2.gif'); ?>" style="vertical-align:middle;"/> Opening. Please wait...
+		</div>
+	</div>
+</div>
+<?php get_footer("footer", array('client')); ?>
+<script type="text/javascript">
+	<?php if($_POST && isset($error) ? $error : ""): ?>
+		document.getElementById('viewEvent<?php echo $clients_ids; ?>').style.display = "block";
+		document.getElementById('errorMsg<?php echo $clients_ids; ?>').innerHTML = '<span style="color:red;"><?php echo $error; ?></span>';
+	<?php endif; ?>
+</script>

@@ -1,0 +1,136 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+	</div>
+	</div>
+	</div>
+</section>
+<footer>
+<div class="footer">
+	<div class="footer_body">
+		<div style="padding-top:5px;">
+			<span style="color:#8f8f8f">All Images &copy; 2015 Photography & Video By Zarek</span>
+			<br />
+			<br />
+			<span style="font-size:14px;color:#8f8f8f;">(818) 304-0334</span>
+			<br />
+			<br />
+			<span id="siteseal"><script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=Mq2LcFQzWSGOlthcMXIfRkB7sJiZRdCDzYVkkIB1kIr63B7OHCpHrT4LPQlO"></script></span>
+		</div>
+		<div style="padding-top:50px; padding-bottom:50px;">
+			<a href="https://www.facebook.com/photographybyzarek" target="_new"><img src="<?php echo themes_url('images/facebook.png'); ?>" style="margin-right:20px;"/></a>
+			<a href="https://vimeo.com/84085452" target="_new"><img src="<?php echo themes_url('images/vimeo-icon.png'); ?>" style="margin-right:20px;"/></a>
+			<a href="https://www.yelp.com/biz/photography-and-video-by-zarek-sherman-oaks" target="_new"><img src="<?php echo themes_url('images/yelp-icon.png'); ?>" style="margin-right:20px;"/></a>
+			<a href="https://www.youtube.com/channel/UCjH23Gcz8bbML5AiSSE4UMA" target="_new"><img src="<?php echo themes_url('images/youtube-icon.png'); ?>" style="margin-right:20px;"/></a>
+		</div>
+	</div>
+</div>
+</footer>
+</div>
+	<div id="main-right-nav" style="float:right; width:18%; line-height:17px; height:1100px; margin-top:290px;">
+		<div id="mini" style="font-family:'Helvetica',sans-serif; color:black; font-size:18px; margin-left:5px; margin-top:80px; -webkit-transition:all 0.5 linear; position:absolute;">
+			<div style="font-size:16px; margin-bottom:2px; font-weight:bold;padding-bottom:5px;"><a href="<?php echo base_url(); ?>" style="color:black;">HOME</a></div>
+			<div style="font-size:16px; margin-bottom:2px; font-weight:bold;">EVENTS</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('events/category?type=weddings'); ?>" style="color:black;">Weddings</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('events/category?type=engagement'); ?>" style="color:black;">Engagement</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('events/category?type=bar_mitzvahs'); ?>" style="color:black;">Bar Mitzvahs</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('events/category?type=corporate'); ?>" style="color:black;">Corporate</a></div>
+			<div style="color:black; font-size:16px; margin-bottom:2px; margin-top:5px; font-weight:bold;">PORTRAITS</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('portraits/category?type=family'); ?>" style="color:black;">Family</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('portraits/category?type=individual'); ?>" style="color:black;">Individual</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('portraits/category?type=children'); ?>" style="color:black;">Children</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('portraits/category?type=pregnancy_boudoir'); ?>" style="color:black;">Pregnancy/Boudoir</a></div>
+			<div style="color:black; font-size:16px; margin-bottom:2px; margin-top:5px; font-weight:bold;">HEADSHOTS</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('headshots/category?type=adult'); ?>" style="color:black;">Adult</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('headshots/category?type=children2'); ?>" style="color:black;">Children</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('headshots/category?type=business'); ?>" style="color:black;">Business</a></div>
+			<div style="color:black; font-size:16px; margin-top:5px; font-weight:bold;">DIGITAL IMAGING</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('digital_imaging/category?type=retouching_restoration'); ?>" style="color:black;">Retouching/Restoration</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('digital_imaging/category?type=image_manipulation'); ?>" style="color:black;">Image Manipulation</a></div>
+			<div style="color:black; font-size:16px; margin-bottom:2px; margin-top:5px; font-weight:bold;">VIDEO</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('video/category?type=weddings'); ?>" style="color:black;">Weddings</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('video/category?type=bar_mitzvahs'); ?>" style="color:black;">Bar Mitzvahs</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('video/category?type=celebrate_life'); ?>" style="color:black;">Celebration of Life</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('video/category?type=growing_montage'); ?>" style="color:black;">Growing up Montage</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('video/category?type=specialty'); ?>" style="color:black;">Specialty</a></div>
+			<div style="color:black; font-size:16px; margin-bottom:2px; margin-top:5px; font-weight:bold;">GALLERY</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('gallery/clients'); ?>" style="color:black;">Clients</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('gallery/zareks'); ?>" style="color:black;">Zarek's</a></div>
+			<div style="color:black; font-size:16px; margin-bottom:2px; margin-top:5px; font-weight:bold;">INFORMATION</div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('information/bio'); ?>" style="color:black;">Bio</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('information/testimonial'); ?>" style="color:black;">Testimonials</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('information/our_referrals'); ?>" style="color:black;">Referrals</a></div>
+			<div style="margin-left:15px;"><a href="<?php echo base_url('information/whats_new'); ?>" style="color:black;">What’s New and Exciting</a></div>
+			<div style="color:black; font-size:16px; margin-top:5px; font-weight:bold;"><a href="<?php echo base_url('contact'); ?>" class="categ" style="color:#000;">CONTACT US</a></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+<?php 
+	include(FCPATH."/themes/default/js/main.php");
+	if( ! empty($js))
+	{
+		foreach($js as $javascript)
+		{
+			include(FCPATH."/themes/default/js/".$javascript.".php");
+		}
+    }
+?>
+/*
+var rightNavHeight = document.getElementById('main-right-nav').clientHeight;
+var mainHeight = document.getElementById('ani').clientHeight;
+if(rightNavHeight > mainHeight)
+{
+	document.getElementById('ani').style.height = '1350px';
+	document.getElementsByClassName('body')[0].style.height = '1030px';
+}
+*/
+document.onkeypress = function (event) {
+	event = (event || window.event);
+	if (event.keyCode == 123) {
+		return false;
+	}
+};
+document.onmousedown = function (event) {
+	event = (event || window.event);
+	if (event.keyCode == 123) {
+		return false;
+	}
+};
+document.onkeydown = function (event) {
+event = (event || window.event);
+	if (event.keyCode == 123) {
+		return false;
+	}
+};
+
+function getScrollTop()
+{
+    if(typeof window.pageYOffset !== 'undefined' ){
+		return window.pageYOffset;
+    }
+
+    var d = document.documentElement;
+    if (d.clientHeight) {
+		return d.scrollTop;
+	}
+
+    return document.body.scrollTop;
+}
+
+window.onscroll = function(){
+	var box = document.getElementById('mini');
+	scroll = getScrollTop();
+
+	if(scroll <= 400){
+		box.style.marginTop = 95 - scroll + "px";
+		box.style.position = "fixed";
+		console.log('a'+scroll);
+	}else{
+		box.style.position = "fixed";
+		box.style.left = "82%";
+		box.style.marginTop = "-290px";
+		console.log('c');
+	}
+};
+</script>
+</body>
+</html>

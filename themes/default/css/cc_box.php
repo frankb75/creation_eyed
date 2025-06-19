@@ -1,0 +1,94 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+#cc
+{
+	background:#000;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	position:fixed;
+	top:0px;
+	left:0px;
+	min-width:100%;
+	min-height:100%;
+	z-index:1010;
+	display:none;
+}
+#cc-panel
+{
+	width:688px;
+	position:fixed;
+	background:#ecf0f1;
+	margin:auto;
+	left:0;
+	right:0;
+	bottom:100px;
+	top:100px;
+	z-index:1011;
+	border:1px solid #bec3c7;
+	color:#5e5e5e;
+	text-align:left;
+	font-size:14px;
+	height:380px;
+	display:none;
+}
+#cc-title
+{
+	background:#3598dc;
+	padding:10px;
+	color:#fff;
+	font-size:21px;
+}
+.input_text3
+{
+	background:#f7f7f7;
+	border:1px solid #eaeaea;
+	box-shadow:0 0 0;
+	border-radius:0;
+	font-size:12px;
+	height:20px;
+	color:#5e5e5e;
+	width:200px;
+	padding-left:5px;
+}
+.input_text3:focus
+{
+	box-shadow: 0 0 5px #ccc;
+}
+/*  */
+#cc2
+{
+	background:#000;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	position:fixed;
+	top:0px;
+	left:0px;
+	min-width:100%;
+	min-height:100%;
+	z-index:1010;
+	display:none;
+}
+#cc-panel2
+{
+	width:688px;
+	position:fixed;
+	background:#ecf0f1;
+	margin:auto;
+	left:0;
+	right:0;
+	bottom:100px;
+	top:100px;
+	z-index:1011;
+	border:1px solid #bec3c7;
+	color:#5e5e5e;
+	text-align:left;
+	font-size:14px;
+	height:380px;
+	display:none;
+}
+#cc-title2
+{
+	background:#3598dc;
+	padding:10px;
+	color:#fff;
+	font-size:21px;
+}

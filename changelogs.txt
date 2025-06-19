@@ -1,0 +1,11 @@
+v1.1 Beta - April 30, 2014
+- Added $this->db->escape().
+- Added Image Library Resize. $this->load->resize(img, new_img, width, height, maintain_ratio = TRUE).
+- Added QModel sql error debug.
+- Added changelogs.txt.
+- Changed mysqli_real_escape_string to $db->escape() on mysqli_driver.php.
+- Fixed CSS Layout bugs.
+- Removed image() error if the file is not found.
+
+v1.0 Beta - April 11, 2014
+- Beta Released.
